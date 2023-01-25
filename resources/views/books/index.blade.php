@@ -4,7 +4,6 @@
 
     <div class="page-header">
         <h1>Livros</h1>
-        <p>Abaixo, veja os livros disponíveis para serem alugados.</p>
     </div>
 
 
@@ -12,7 +11,8 @@
         @if (count($livros) == 0)
             <p>Aparentemente não existem livros cadastrados. Clique no botão abaixo para adicionar.</p>
         @else
-            <table class="table">
+            <p>Abaixo veja os livros disponíveis para serem alugados.</p>
+            <table class="table table-hover">
                 <thead>
                     <th scope="col">#</th>
                     <th scope="col">Título</th>

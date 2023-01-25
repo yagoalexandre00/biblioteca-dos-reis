@@ -1,11 +1,129 @@
+/*
+    Color Palletes
+    https://colorhunt.co/palette/feffdbffc60bff8b00444444
+    https://colorhunt.co/palette/f3efe043424222222222a39f
+*/
+
 * {
     font-family: 'Roboto';
 }
 
+body {
+    background-color: #F3EFE0;
+    min-height: 100vh;
+    max-width: 100%;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+.msg {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    width: 100%;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 10px;
+}
+
+.btn-primary {
+    height: auto;
+    width: 10%;
+    display: grid;
+    margin: auto;
+    font-size: 20px;
+    background-color: #434242;
+    color: #F3EFE0;
+    border-color: #3b3b3b;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #333333;
+    border-color: #333333;
+}
 
 /* Navbar */
+.navbar {
+    background-color: #434242;
+}
+
 .navbar-brand img {
     width: 60px;
     margin-left: 10px;
+    padding: 3px;
+    background-color: #F3EFE0;
+    border-radius: 10%;
+    transition: 0.3s;
 }
 
+.navbar-nav a {
+    font-size: 16px;
+    margin-left: 10px;
+    color: #F3EFE0;
+    transition: 0.3s;
+}
+
+.navbar-nav a:hover {
+    color: #ffc423;
+}
+
+
+/* Page Header */
+.page-header h1 {
+    color: #434242;
+    font-weight: 600;
+    padding: 20px 0 0 20px;
+}
+
+.page-header p {
+    padding-left: 20px;
+    color: #5c5c5c;
+}
+
+/* Books Table */
+.books-table p {
+    padding-left: 20px;
+    color: #5c5c5c;
+}
+
+.table {
+    max-width: 95%;
+    margin: 10px auto;
+}
+
+/* Create Book Form */
+.create-book-form {
+    color: #3b3b3b;
+}
+
+.form-group {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.form-control {
+    margin-top: 5px;
+    width: 100%;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #434242;
+    color: #F3EFE0;
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin-bottom: 0;
+}
