@@ -124,11 +124,12 @@ body {
 }
 
 #img-container img {
+    width: 325px;
     border-radius: 10px;
 }
 
 .book-title {
-    font-size: 36px;
+    font-size: 40px;
     font-weight: 900;
 }
 
@@ -137,7 +138,7 @@ body {
 .book-registration-number {
     margin: 0;
     padding-top: 5px;
-    font-size: 14px;
+    font-size: 18px;
     display: flex;
 }
 

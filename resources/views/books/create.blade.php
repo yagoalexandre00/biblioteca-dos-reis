@@ -8,7 +8,7 @@
     </div>
 
     <div class="create-book-form">
-        <form action="/livros" method="POST">
+        <form action="/livros" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <label for="title">Título</label>
@@ -28,6 +28,10 @@
                 <label for="synopsis">Sinopse</label>
                 <textarea type="text" name="synopsis" id="synopsis" class="form-control" rows="2"
                     placeholder="Escreva uma breve sinopse do livro"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="image">Imagem da capa</label>
+                <input type="file" name="image" id="image" class="form-control">
             </div>
             <div class="form-group">
                 <label for="registration_number">Número de Registro</label>

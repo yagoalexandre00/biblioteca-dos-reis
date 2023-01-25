@@ -16,6 +16,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     {{-- Google Fonts --}}
     <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+    {{-- Icon --}}
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
     {{-- Project CSS --}}
     <link rel="stylesheet" href="/css/styles.css">
 </head>
@@ -39,7 +41,7 @@
     <main>
         <div class="container-fluid">
             <div class="row">
-                  @if (session('msg'))
+                      @if (session('msg'))
     <p class="msg">{{ session('msg') }}</p>
     @endif
     @yield('content')

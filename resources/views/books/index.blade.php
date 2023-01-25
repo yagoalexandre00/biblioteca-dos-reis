@@ -20,7 +20,7 @@
                     <th scope="col">Autor</th>
                     <th scope="col">Gênero</th>
                     <th scope="col">Situação</th>
-                    <th scope="col"></th>
+                    <th scope="col">Ver mais</th>
                 </thead>
                 <tbody>
                     @foreach ($livros as $livro)

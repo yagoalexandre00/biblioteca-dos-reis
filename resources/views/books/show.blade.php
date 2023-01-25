@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-4" id="img-container">
                 {{-- imagem da capa --}}
-                <img src="https://m.media-amazon.com/images/I/41Uu2qnzEgL.jpg" alt="">
+                <img src="/img/books/{{ $livro->image }}" alt="{{ $livro->title }}">
             </div>
             <div class="col-md-4" id="info-container">
                 <h1 class="book-title">{{ $livro->title }}</h1>

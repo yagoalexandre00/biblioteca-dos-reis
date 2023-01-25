@@ -26,6 +26,17 @@ class BooksController extends Controller
         $book->genre = $request->genre;
         $book->registration_number = $request->registration_number;
         $book->synopsis = $request->synopsis;
+
+        if ($request->hasFile('image') && $request->file('image')->isValid()) {
+            $requestImage = $request->image;
+            $extension = $requestImage->extension();
+
+            $imageName = md5($requestImage->getClientOriginalName() . strtotime('now')) . '.' . $extension;
+            $requestImage->move(public_path('/img/books'), $imageName);
+
+            $book->image = $imageName;
+        }
+
         $book->save();
 
         return redirect('/livros')->with('msg', 'Livro adicionado com sucesso!');
