@@ -12,4 +12,22 @@ class BooksController extends Controller
         $books = Book::all();
         return view('books.index', ['livros' => $books]);
     }
+
+    public function create()
+    {
+        return view('books.create');
+    }
+
+    public function store(Request $request)
+    {
+        $book = new Book;
+        $book->title = $request->title;
+        $book->author = $request->author;
+        $book->genre = $request->genre;
+        $book->registration_number = $request->registration_number;
+
+        $book->save();
+
+        return redirect('/livros')->with('msg', 'Livro adicionado com sucesso!');
+    }
 }
