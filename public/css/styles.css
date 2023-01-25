@@ -92,6 +92,10 @@ body {
     margin: 10px auto;
 }
 
+.table i {
+    color: #3b3b3b;
+}
+
 /* Create Book Form */
 .create-book-form {
     color: #3b3b3b;
@@ -111,6 +115,42 @@ body {
 .form-control {
     margin-top: 5px;
     width: 100%;
+}
+
+/* Show Book */
+#img-container,
+#info-container {
+    margin-top: 30px;
+}
+
+#img-container img {
+    border-radius: 10px;
+}
+
+.book-title {
+    font-size: 36px;
+    font-weight: 900;
+}
+
+.book-author,
+.book-genre,
+.book-registration-number {
+    margin: 0;
+    padding-top: 5px;
+    font-size: 14px;
+    display: flex;
+}
+
+.book-author i,
+.book-genre i,
+.book-registration-number i,
+.book-synopsis i {
+    padding-right: 10px;
+}
+
+.book-synopsis {
+    margin-top: 20px;
+    font-size: 16px;
 }
 
 /* Footer */

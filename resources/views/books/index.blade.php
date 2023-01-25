@@ -14,22 +14,24 @@
             <p>Abaixo veja os livros disponíveis para serem alugados.</p>
             <table class="table table-hover">
                 <thead>
-                    <th scope="col">#</th>
+                    {{-- <th scope="col">#</th> --}}
+                    <th scope="col">Nº de Registro</th>
                     <th scope="col">Título</th>
                     <th scope="col">Autor</th>
                     <th scope="col">Gênero</th>
-                    <th scope="col">Nº de Registro</th>
                     <th scope="col">Situação</th>
+                    <th scope="col"></th>
                 </thead>
                 <tbody>
                     @foreach ($livros as $livro)
                         <tr>
-                            <th scope="row">{{ $livro->id }}</th>
+                            {{-- <th scope="row">{{ $livro->id }}</th> --}}
+                            <th scope="row"> {{ $livro->registration_number }} </td>
                             <td> {{ $livro->title }} </td>
                             <td> {{ $livro->author }} </td>
                             <td> {{ $livro->genre }} </td>
-                            <td> {{ $livro->registration_number }} </td>
                             <td> {{ $livro->situation }} </td>
+                            <td> <a href="/livros/{{ $livro->id }}"><i class="fa-regular fa-eye"></i></a> </td>
                         </tr>
                     @endforeach
                 </tbody>

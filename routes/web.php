@@ -10,3 +10,4 @@ Route::get('/', function () {
 Route::get('/livros', [BooksController::class, 'index']);
 Route::get('/livros/criar', [BooksController::class, 'create']);
 Route::post('/livros', [BooksController::class, 'store']);
+Route::get('/livros/{id}', [BooksController::class, 'show']);

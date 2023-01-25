@@ -25,8 +25,13 @@
                     placeholder="Ex.: Terror, Ação, Aventura, Romance, etc">
             </div>
             <div class="form-group">
+                <label for="synopsis">Sinopse</label>
+                <textarea type="text" name="synopsis" id="synopsis" class="form-control" rows="2"
+                    placeholder="Escreva uma breve sinopse do livro"></textarea>
+            </div>
+            <div class="form-group">
                 <label for="registration_number">Número de Registro</label>
-                <input type="text" name="registration_number" id="registration_number" class="form-control"
+                <input type="textarea" name="registration_number" id="registration_number" class="form-control"
                     onkeypress="return checkNumber(event);" maxlength="5" placeholder="Insira apenas números">
             </div>
             <button type="submit" class="btn btn-primary">Adicionar</button>
