@@ -7,7 +7,7 @@
                 {{-- imagem da capa --}}
                 <img src="/img/books/{{ $livro->image }}" alt="{{ $livro->title }}">
             </div>
-            <div class="col-md-4" id="info-container">
+            <div class="col-md-8" id="info-container">
                 <h1 class="book-title">{{ $livro->title }}</h1>
                 <p class="book-author"><i class="fa-solid fa-pen"></i> {{ $livro->author }}</p>
                 <p class="book-genre"><i class="fa-solid fa-comments"></i> {{ $livro->genre }}</p>
