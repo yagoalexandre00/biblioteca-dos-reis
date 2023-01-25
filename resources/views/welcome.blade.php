@@ -2,5 +2,8 @@
 @section('title', 'Home')
 
 @section('content')
-    <h1>hello world</h1>
+    <div class="page-header">
+        <h1>Página Inicial</h1>
+        <p>Seja bem-vindo(a) à Biblioteca dos Reis!</p>
+    </div>
 @endsection

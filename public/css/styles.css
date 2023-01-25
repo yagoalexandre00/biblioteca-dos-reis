@@ -1,3 +1,10 @@
 * {
     font-family: 'Roboto';
 }
+
+
+/* Navbar */
+.navbar-brand img {
+    width: 60px;
+    margin-left: 10px;
+}

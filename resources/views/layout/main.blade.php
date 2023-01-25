@@ -23,12 +23,14 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="/img/crown-solid.svg" alt=""></a>
+            <a class="navbar-brand" href="/"><img src="/img/logo.png" alt="Biblioteca dos Reis Logo"></a>
 
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" href="#">Home</a>
-                    <a class="nav-link" href="#">Livros</a>
+                    <a class="nav-link" href="/">Home</a>
+                    <a class="nav-link" href="/livros">Livros</a>
+                    <a class="nav-link" href="#">Cadastrar</a>
+                    <a class="nav-link" href="#">Entrar</a>
                 </div>
             </div>
         </div>
