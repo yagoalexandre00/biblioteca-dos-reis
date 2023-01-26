@@ -44,8 +44,8 @@ DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=biblioteca-dos-reis
-DB_USERNAME=**usuário_admin_do_seu_SQL**
-DB_PASSWORD=**senha_do_admin_do_seu_SQL**
+DB_USERNAME=[usuário_admin_do_seu_SQL]
+DB_PASSWORD=[senha_do_admin_do_seu_SQL]
 ```
 
 5. Com as dependências corretamente instaladas e o arquivo de variáveis configuradas, é hora de "buildar" o Jetstream + Livewire para realizar a autenticação do projeto com npm:
