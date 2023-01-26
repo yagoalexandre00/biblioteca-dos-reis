@@ -56,7 +56,7 @@ npm run build
 php artisan migrate
 ```
 
-6. **Realizado todo o passo a passo, agora é a tão esperada hora de rodas a aplicação! 😄**
+**6. Realizado todo o passo a passo, agora é a tão esperada hora de rodas a aplicação! 😄**
 ```
 php artisan serve
 ```
