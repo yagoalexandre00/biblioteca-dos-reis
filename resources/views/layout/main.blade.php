@@ -29,10 +29,14 @@
 
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" href="/">Home</a>
-                    <a class="nav-link" href="/livros">Livros</a>
-                    <a class="nav-link" href="#">Cadastrar</a>
-                    <a class="nav-link" href="#">Entrar</a>
+                    @auth
+                            <a class="nav-link" href="/">Home</a>
+                            <a class="nav-link" href="/livros">Livros</a>
+                    @endauth
+                    @guest
+                        <a class="nav-link" href="/register">Cadastrar</a>
+                        <a class="nav-link" href="/login">Entrar</a>
+                    @endguest
                 </div>
             </div>
         </div>
@@ -41,7 +45,7 @@
     <main>
         <div class="container-fluid">
             <div class="row">
-                      @if (session('msg'))
+      @if (session('msg'))
     <p class="msg">{{ session('msg') }}</p>
     @endif
     @yield('content')
