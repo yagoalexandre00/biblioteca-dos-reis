@@ -31,13 +31,13 @@
                 <div class="navbar-nav">
                     <a class="nav-link" href="/">Home</a>
                     <a class="nav-link" href="/livros">Livros</a>
-                    <a class="nav-link" href="/livros/criar">Adicionar Livro</a>
                     @auth
-                        <a class="nav-link" href="/dashboard">Minhas reservas</a>
+                        <a class="nav-link" href="/livros/criar">Adicionar Livro</a>
+                            <a class="nav-link" href="/dashboard">Minhas reservas</a>
                     @endauth
                     @guest
-                        <a class="nav-link" href="/register">Cadastrar</a>
-                        <a class="nav-link" href="/login">Entrar</a>
+                            <a class="nav-link" href="/register">Cadastrar</a>
+                            <a class="nav-link" href="/login">Entrar</a>
                     @endguest
                 </div>
             </div>
@@ -47,7 +47,7 @@
     <main>
         <div class="container-fluid">
             <div class="row">
-          @if (session('msg'))
+           @if (session('msg'))
     <p class="msg">{{ session('msg') }}</p>
     @endif
     @yield('content')
