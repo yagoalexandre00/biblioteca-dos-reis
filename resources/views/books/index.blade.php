@@ -37,6 +37,5 @@
                 </tbody>
             </table>
         @endif
-        <a class="btn btn-primary" href="/livros/criar">Adicionar</a>
     </div>
 @endsection

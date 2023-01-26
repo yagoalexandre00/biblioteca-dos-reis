@@ -2,6 +2,7 @@
 Projeto de gerenciamento de biblioteca.
 
 ## Como rodar em sua máquina local?
+### Requisitos
 Primeiramente é necessário possuir alguns requisitos mínimos listados abaixo:
 - PHP 8.0 ou superior
 - Composer (preferência a versão 2.5.1)
@@ -9,7 +10,7 @@ Primeiramente é necessário possuir alguns requisitos mínimos listados abaixo:
 - npm 8.19.3
 - MySQL ou MariaDB
 
-## Passo a passo
+### Passo a passo 
 1. Primeiramente, é necessário realizar o git clone do repositório e entrar na pasta do projeto:
 
 ```
@@ -52,6 +53,9 @@ DB_PASSWORD=[senha_do_admin_do_seu_SQL]
 ```
 npm install
 npm run build
-php artisna migrate
+php artisan migrate
 ```
 
+6. Realizado todo o passo a passo, agora é a tão esperada hora de rodas a aplicação! 😄
+7. 
+ 
