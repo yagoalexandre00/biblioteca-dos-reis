@@ -10,8 +10,11 @@ Primeiramente é necessário possuir alguns requisitos mínimos listados abaixo:
 - MySQL ou MariaDB
 
 ## Passo a passo
-1 - Primeiramente, é necessário realizar o git clone do repositório:
+1. Primeiramente, é necessário realizar o git clone do repositório e entrar na pasta do projeto:
 
 ```
 git clone https://github.com/goltaraya/biblioteca-dos-reis.git
+cd biblioteca-dos-reis
 ```
+
+2 - Depois disso,
