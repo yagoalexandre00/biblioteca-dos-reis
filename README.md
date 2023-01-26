@@ -11,24 +11,24 @@ Primeiramente é necessário possuir os requisitos listados abaixo:
 - MySQL ou MariaDB
 
 ### Passo a passo 🚶
-1. **Primeiramente, é necessário realizar o git clone do repositório e entrar na pasta do projeto:**
+**1. Primeiramente, é necessário realizar o git clone do repositório e entrar na pasta do projeto:**
 
 ```
 git clone https://github.com/goltaraya/biblioteca-dos-reis.git
 cd biblioteca-dos-reis
 ```
 
-2. **Depois disso, é necessário instalar as dependências do projeto:**
+**2. Depois disso, é necessário instalar as dependências do projeto:**
 ```
 composer install
 ```
 
-3. **Feito isso, é hora de criar um arquivo com as variáveis de ambiente (o famoso .env). Como O laravel já disponibiliza uma .env.example, nós iremos apenas copiar e renomear este arquivo:**
+**3. Feito isso, é hora de criar um arquivo com as variáveis de ambiente (o famoso .env). Como O laravel já disponibiliza uma .env.example, nós iremos apenas copiar e renomear este arquivo:**
 ```
 cp .env.example .env
 ```
 
-4. **Mudaremos agora as seguintes variáveis correspondentes ao Banco de Dados:**
+**4. Mudaremos agora as seguintes variáveis correspondentes ao Banco de Dados:**
 <br>Antes:
 ```
 DB_CONNECTION=mysql
@@ -49,7 +49,7 @@ DB_USERNAME=[usuário_admin_do_seu_SQL]
 DB_PASSWORD=[senha_do_admin_do_seu_SQL]
 ```
 
-5. **Com as dependências corretamente instaladas e o arquivo de variáveis configuradas, é hora de "buildar" o Jetstream + Livewire para realizar a autenticação do projeto com npm:**
+**5. Com as dependências corretamente instaladas e o arquivo de variáveis configuradas, é hora de "buildar" o Jetstream + Livewire para realizar a autenticação do projeto com npm:**
 ```
 npm install
 npm run build
