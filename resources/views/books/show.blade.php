@@ -11,12 +11,12 @@
                 <h1 class="book-title">{{ $livro->title }}</h1>
                 <p class="book-author"><i class="fa-solid fa-pen"></i> {{ $livro->author }}</p>
                 <p class="book-genre"><i class="fa-solid fa-comments"></i> {{ $livro->genre }}</p>
-                <p class="book-registration-number"><i class="fa-solid fa-lightbulb"></i> {{ $livro->registration_number }}
+                <p class="book-situation"><i class="fa-solid fa-lightbulb"></i> {{ $livro->situation }}
                 </p>
             </div>
         </div>
         <div class="row">
-            <p class="book-synopsis"><i class="fa-solid fa-info"></i> {{ $livro->synopsis }}</p>
+            <p class="book-synopsis"><i class="fa-regular fa-circle-question"></i> {{ $livro->synopsis }}</p>
         </div>
     </div>
 @endsection
