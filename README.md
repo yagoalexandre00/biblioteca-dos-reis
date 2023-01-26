@@ -29,7 +29,7 @@ cp .env.example .env
 ```
 
 4. Mudaremos agora as seguintes variáveis correspondentes ao Banco de Dados:
-Antes:
+<br>Antes:
 ```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
