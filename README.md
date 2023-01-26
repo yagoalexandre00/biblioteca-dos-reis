@@ -3,7 +3,7 @@ Projeto de gerenciamento de biblioteca.
 
 ## Como rodar em sua máquina local? 🤔
 ### Requisitos 🚩
-Primeiramente é necessário possuir alguns requisitos mínimos listados abaixo:
+Primeiramente é necessário possuir os requisitos listados abaixo:
 - PHP 8.0 ou superior
 - Composer (preferência a versão 2.5.1)
 - Laravel 9.5.1
