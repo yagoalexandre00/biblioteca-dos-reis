@@ -1,7 +1,7 @@
-# Biblioteca dos Reis 
+# Biblioteca dos Reis 📚
 Projeto de gerenciamento de biblioteca.
 
-## Como rodar em sua máquina local?
+## Como rodar em sua máquina local? 🤔
 ### Requisitos 🚩
 Primeiramente é necessário possuir alguns requisitos mínimos listados abaixo:
 - PHP 8.0 ou superior
