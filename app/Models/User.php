@@ -59,14 +59,8 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
-
-    public function books()
+    public function reservations()
     {
-        return $this->hasMany('App\Models\Book');
-    }
-
-    public function booksAsReservation()
-    {
-        return $this->belongsToMany('App\Model\Book');
+        return $this->hasMany('App\Models\Reservation');
     }
 }

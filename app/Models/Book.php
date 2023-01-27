@@ -10,13 +10,8 @@ class Book extends Model
     use HasFactory;
 
 
-    public function user()
+    public function reservation()
     {
-        return $this->belongsTo('App\Models\User');
-    }
-
-    public function users()
-    {
-        return $this->belongsToMany('App\Model\User');
+        return $this->belongsTo('App\Models\Reservation');
     }
 }

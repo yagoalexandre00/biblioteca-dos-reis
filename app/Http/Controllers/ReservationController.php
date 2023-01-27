@@ -30,4 +30,13 @@ class ReservationController extends Controller
 
         return redirect('/livros')->with('msg', 'Algo de inesperado aconteceu. Por favor, entre em contato com os administradores.');
     }
+
+    public function dashboard()
+    {
+        $user = auth()->user();
+        // $reservations = $user->reservations;
+
+
+        return view('dashboard');
+    }
 }
