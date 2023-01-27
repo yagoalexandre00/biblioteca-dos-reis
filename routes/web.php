@@ -15,6 +15,10 @@ Route::get('/livros/{id}', [BooksController::class, 'show']);
 
 Route::get('/livros/reserva/{id}', [BooksController::class, 'reservationInformation'])->middleware('auth');
 
+
+
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

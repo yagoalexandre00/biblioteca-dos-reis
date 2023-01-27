@@ -8,7 +8,7 @@
             <p>Olá, senhor(a) {{ auth()->user()->name }}! Vimos que você possui interesse em alugar o livro
                 {{ $livro->title }}.
             </p>
-            <form action="#" method="POST">
+            <form class="confirmation-book-reservation" action="#" method="POST">
                 <div class="form-group">
                     <label for="date">Escolha a data de retorno:</label>
                     <input type="date" id="date" name="date" class="form-control">

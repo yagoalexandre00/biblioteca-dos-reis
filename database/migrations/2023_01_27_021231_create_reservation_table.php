@@ -12,7 +12,8 @@ return new class extends Migration {
      */
     public function up()
     {
-        Schema::create('book_user', function (Blueprint $table) {
+        Schema::create('reservation', function (Blueprint $table) {
+            $table->id();
             $table->foreignId('users_id')->constrained();
             $table->foreignId('books_id')->constrained();
             $table->enum('situation', ['Atrasado', 'Devolvido', 'No prazo'])->default('No prazo');
@@ -27,6 +28,6 @@ return new class extends Migration {
      */
     public function down()
     {
-        Schema::dropIfExists('book_user');
+        Schema::dropIfExists('reservation');
     }
 };

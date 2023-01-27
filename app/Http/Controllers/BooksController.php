@@ -54,4 +54,13 @@ class BooksController extends Controller
         $livro = Book::findorFail($id);
         return view('books.reservation', ['livro' => $livro]);
     }
+
+    public function reservation($id, Request $request)
+    {
+        $user = auth()->user();
+        $user->booksAsReservation()->attach($id);
+        # $user->
+
+
+    }
 }
