@@ -13,10 +13,18 @@
                 <p class="book-genre"><i class="fa-solid fa-comments"></i> {{ $livro->genre }}</p>
                 <p class="book-situation"><i class="fa-solid fa-lightbulb"></i> {{ $livro->situation }}
                 </p>
+                <div class="button-book">
+                    @if ($livro->situation == 'Disponível')
+                        <button type="button" class="btn btn-secondary">Realizar reserva</button>
+                    @else
+                        <button type="button" class="btn btn-danger" disabled>Indisponível</button>
+                    @endif
+                </div>
             </div>
         </div>
         <div class="row">
             <p class="book-synopsis"><i class="fa-regular fa-circle-question"></i> {{ $livro->synopsis }}</p>
         </div>
+
     </div>
 @endsection

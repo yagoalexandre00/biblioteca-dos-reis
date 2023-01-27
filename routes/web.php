@@ -8,7 +8,7 @@ Route::get('/', function () {
 });
 
 Route::get('/livros', [BooksController::class, 'index']);
-Route::get('/livros/criar', [BooksController::class, 'create'])->middleware('auth:admin');
+Route::get('/livros/criar', [BooksController::class, 'create'])->middleware('auth');
 Route::post('/livros', [BooksController::class, 'store']);
 Route::get('/livros/{id}', [BooksController::class, 'show']);
 // Route::get('/dashboard', []) ## Aula 28 - Matheus Battisti

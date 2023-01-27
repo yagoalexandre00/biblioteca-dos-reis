@@ -135,7 +135,7 @@ body {
 
 .book-author,
 .book-genre,
-.book-registration-number {
+.book-situation {
     margin: 0;
     padding-top: 5px;
     font-size: 18px;
@@ -144,7 +144,7 @@ body {
 
 .book-author i,
 .book-genre i,
-.book-registration-number i,
+.book-situation i,
 .book-synopsis i {
     padding-right: 10px;
 }
@@ -152,6 +152,10 @@ body {
 .book-synopsis {
     margin-top: 20px;
     font-size: 16px;
+}
+
+.button-book {
+    padding-top: 10px;
 }
 
 /* Footer */
