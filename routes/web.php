@@ -13,12 +13,17 @@ Route::post('/livros', [BooksController::class, 'store']);
 Route::get('/livros/{id}', [BooksController::class, 'show']);
 // Route::get('/dashboard', []) ## Aula 28 - Matheus Battisti
 
+Route::get('/livros/reserva/{id}', [BooksController::class, 'reservationInformation'])->middleware('auth');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get(
+        '/dashboard',
+        function () {
+            return view('dashboard');
+        }
+    )->name('dashboard');
 });

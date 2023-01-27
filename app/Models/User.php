@@ -64,4 +64,9 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Models\Book');
     }
+
+    public function booksAsReservation()
+    {
+        return $this->belongsToMany('App\Model\Book');
+    }
 }

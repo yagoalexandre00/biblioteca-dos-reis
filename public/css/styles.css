@@ -158,6 +158,17 @@ body {
     padding-top: 10px;
 }
 
+/* Reservation Page */
+.reservation-book-container {
+    padding: 20px;
+}
+
+.reservation-book-container img {
+    width: 275px;
+    border-radius: 10px;
+}
+
+
 /* Footer */
 footer {
     text-align: center;
