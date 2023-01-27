@@ -34,7 +34,7 @@ class ReservationController extends Controller
     public function dashboard()
     {
         $user = auth()->user();
-        // $reservations = $user->reservations;
+        // $reservations = Reservation:;;
 
 
         return view('dashboard');
