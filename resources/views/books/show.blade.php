@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-4" id="img-container">
                 {{-- imagem da capa --}}
-                <img src="/img/books/{{ $livro->image }}" alt="{{ $livro->title }}">
+                <img src="/img/{{ $livro->image ? 'books/'.$livro->image : 'default-book-image.jpg' }}" alt="{{ $livro->title }}">
             </div>
             <div class="col-md-8" id="info-container">
                 <h1 class="book-title">{{ $livro->title }}</h1>

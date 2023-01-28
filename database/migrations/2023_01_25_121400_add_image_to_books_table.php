@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('books', function (Blueprint $table) {
-            $table->string('image', 200);
+            $table->string('image', 200)->nullable();
         });
     }
 

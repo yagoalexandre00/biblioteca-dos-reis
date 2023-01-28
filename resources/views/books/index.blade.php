@@ -9,7 +9,7 @@
 
     <div class="books-table">
         @if (count($livros) == 0)
-            <p>Aparentemente não existem livros cadastrados. Clique no botão abaixo para adicionar.</p>
+            <p>Aparentemente não existem livros cadastrados.</p>
         @else
             <p>Abaixo veja os livros disponíveis para serem alugados.</p>
             <table class="table table-hover">
