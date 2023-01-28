@@ -6,7 +6,7 @@
         <div class="col-8">
             <h1>Reserva de livro</h1>
             <p>Olá, senhor(a) {{ $usuario->name }}! Vimos que você possui interesse em alugar o livro
-                {{ $livro->title }}.
+                {{ $livro->title }} de {{ $livro->author }}.
             </p>
             <form class="confirmation-book-reservation" action="/livros/reserva" method="POST">
                 @csrf
@@ -19,9 +19,10 @@
             </form>
         </div>
         <div class="col-4 reservation-book-container">
-            <img id="reservation-book-image" src="/img/{{ $livro->image ? 'books/'.$livro->image : 'default-book-image.jpg' }}" alt="{{ $livro->title }}">
+            <img id="reservation-book-image"
+                src="/img/{{ $livro->image ? 'books/' . $livro->image : 'default-book-image.jpg' }}"
+                alt="{{ $livro->title }}">
         </div>
     </div>
-
 
 @endsection
