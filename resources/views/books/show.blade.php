@@ -15,7 +15,7 @@
                 </p>
                 <div class="button-book">
                     @if ($livro->situation == 'Disponível')
-                        <a href="/livros/reserva/{{ $livro->id }}" class="btn btn-secondary">Realizar reserva</a>
+                        <a href="/livros/reserva/{{ $livro->id }}" class="btn btn-success">Realizar reserva</a>
                     @else
                         <a class="btn btn-danger" disabled>Indisponível</a>
                     @endif

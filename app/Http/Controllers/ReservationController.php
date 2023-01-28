@@ -36,14 +36,12 @@ class ReservationController extends Controller
         $user = auth()->user();
         $reservations = Reservation::where('users_id', $user->id)->get();
 
-        $reservationReturnDates = [];
         $books = [];
         foreach ($reservations as $reservation) {
             $books[] = Book::findOrFail($reservation->books_id);
-            $reservationReturnDates[] = $reservation->return_date;
         }
 
 
-        return view('dashboard', ['livros' => $books, 'dataDevolucao' => $reservationReturnDates]);
+        return view('dashboard', ['livros' => $books, 'reserva' => $reservations]);
     }
 }

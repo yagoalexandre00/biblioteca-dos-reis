@@ -82,7 +82,7 @@ body {
 }
 
 /* Books Table */
-.books-table p {
+.books-table p, .dashboard-books-table p {
     padding-left: 20px;
     color: #5c5c5c;
 }
