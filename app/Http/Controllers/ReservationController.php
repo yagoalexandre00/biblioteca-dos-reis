@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Reservation;
 use Illuminate\Http\Request;
 use App\Models\Book;
+use Datetime;
 
 class ReservationController extends Controller
 {
@@ -20,6 +21,12 @@ class ReservationController extends Controller
         $reservation = new Reservation;
         $reservation->users_id = auth()->user()->id;
         $reservation->books_id = $request->books_id;
+        $currentDate = new DateTime();
+        $returnDate = new Datetime($request->date);
+        if ($returnDate < $currentDate) {
+            return redirect('/livros/reserva/' . $reservation->books_id)->with('msg', 'Você não pode realizar uma reserva para uma data passada.');
+        }
+
         $reservation->return_date = $request->date;
 
         if ($reservation->save()) {

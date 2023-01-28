@@ -19,7 +19,7 @@
             </form>
         </div>
         <div class="col-4 reservation-book-container">
-            <img id="reservation-book-image" src="/img/books/{{ $livro->image }}" alt="{{ $livro->title }}">
+            <img id="reservation-book-image" src="/img/{{ $livro->image ? 'books/'.$livro->image : 'default-book-image.jpg' }}" alt="{{ $livro->title }}">
         </div>
     </div>
 
