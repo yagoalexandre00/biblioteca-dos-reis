@@ -18,3 +18,10 @@ Route::get('/livros/{id}', [BooksController::class, 'show']);
 Route::get('/dashboard', [ReservationController::class, 'dashboard'])->middleware('auth');
 Route::get('/livros/reserva/{id}', [ReservationController::class, 'create'])->middleware('auth');
 Route::post('/livros/reserva', [ReservationController::class, 'store'])->middleware('auth');
+
+
+// AdminController
+Route::get('/admin', 'LoginController@index');
+Route::get('/admin', 'LoginController@index');
+Route::get('/admin', 'LoginController@index');
+Route::get('/admin', 'LoginController@index');
