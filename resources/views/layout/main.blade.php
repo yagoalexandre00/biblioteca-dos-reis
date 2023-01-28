@@ -32,21 +32,21 @@
                     <a class="nav-link" href="/">Home</a>
                     <a class="nav-link" href="/livros">Livros</a>
                     @auth
-                        <a class="nav-link" href="/livros/criar">Adicionar Livro</a>
-                        <a class="nav-link" href="/dashboard">Minhas reservas</a>
-                        <form action="/logout" method="POST">
-                            @csrf
-                            <a
-                            class="nav-link"
-                            href="/dashboard"
-                            onclick="event.preventDefault();
+                                    <a class="nav-link" href="/livros/criar">Adicionar Livro</a>
+                                    <a class="nav-link" href="/dashboard">Minhas reservas</a>
+                                    <form action="/logout" method="POST">
+                                        @csrf
+                                        <a
+                                        class="nav-link"
+                                        href="/dashboard"
+                                        onclick="event.preventDefault();
                                     this.closest('form').submit();">Sair</a>
-                        </form>
+                                    </form>
 
                     @endauth
                     @guest
-                        <a class="nav-link" href="/login">Entrar</a>
-                        <a class="nav-link" href="/register">Cadastrar</a>
+                                    <a class="nav-link" href="/login">Entrar</a>
+                                    <a class="nav-link" href="/register">Cadastrar</a>
                     @endguest
                 </div>
             </div>
@@ -56,9 +56,11 @@
     <main>
         <div class="container-fluid">
             <div class="row">
-           @if (session('msg'))
-    <p class="msg">{{ session('msg') }}</p>
-    @endif
+            @if (session('msg-success'))
+                <p class="msg-success">{{ session('msg-success') }}</p>
+            @elseif (session('msg-error'))
+                <p class="msg-error">{{ session('msg-error') }}</p>
+            @endif
     @yield('content')
     </div>
     </div>

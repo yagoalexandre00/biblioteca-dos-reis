@@ -24,7 +24,7 @@ class ReservationController extends Controller
         $currentDate = new DateTime();
         $returnDate = new Datetime($request->date);
         if ($returnDate < $currentDate) {
-            return redirect('/livros/reserva/' . $reservation->books_id)->with('msg', 'Você não pode realizar uma reserva para uma data passada.');
+            return redirect('/livros/reserva/' . $reservation->books_id)->with('msg-error', 'Você não pode realizar uma reserva para uma data passada.');
         }
 
         $reservation->return_date = $request->date;
@@ -32,10 +32,10 @@ class ReservationController extends Controller
         if ($reservation->save()) {
             Book::where('id', $request->books_id)
                 ->update(['situation' => 'Emprestado']);
-            return redirect('/dashboard')->with('msg', 'Sua reserva foi realizada com sucesso!');
+            return redirect('/dashboard')->with('msg-success', 'Sua reserva foi realizada com sucesso!');
         }
 
-        return redirect('/livros')->with('msg', 'Algo de inesperado aconteceu. Por favor, entre em contato com os administradores.');
+        return redirect('/livros')->with('msg-error', 'Algo de inesperado aconteceu. Por favor, entre em contato com os administradores.');
     }
 
     public function dashboard()

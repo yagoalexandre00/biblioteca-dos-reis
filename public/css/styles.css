@@ -16,10 +16,20 @@ body {
     position: relative;
 }
 
-.msg {
+.msg-success {
     background-color: #d4edda;
     color: #155724;
     border: 1px solid #c3e6cb;
+    width: 100%;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 10px;
+}
+
+.msg-error {
+    background-color: #edd4d4;
+    color: #8b0909;
+    border: 1px solid #edd4d4;
     width: 100%;
     margin-bottom: 0;
     text-align: center;
@@ -82,7 +92,8 @@ body {
 }
 
 /* Books Table */
-.books-table p, .dashboard-books-table p {
+.books-table p,
+.dashboard-books-table p {
     padding-left: 20px;
     color: #5c5c5c;
 }

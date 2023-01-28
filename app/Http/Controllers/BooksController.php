@@ -39,7 +39,7 @@ class BooksController extends Controller
 
         $book->save();
 
-        return redirect('/livros')->with('msg', 'Livro adicionado com sucesso!');
+        return redirect('/livros')->with('msg-success', 'Livro adicionado com sucesso!');
     }
 
     public function show($id)
