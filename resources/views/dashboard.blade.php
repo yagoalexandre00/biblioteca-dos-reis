@@ -1,11 +1,12 @@
 @extends('layout.main')
 @section('title', 'Dashboard')
 @section('content')
+{{-- date_format(new DateTime($dataDevolucao[array_search($livro, $livros)]), 'd/m/Y') --}}
 
-    {{-- <ul>
-        @foreach ($livros as $livro)
-            <li>{{ $livro->name }}</li>
-        @endforeach
-    </ul> --}}
+<div>
+    @if ($)
+
+    @endif
+</div>
 
 @endsection

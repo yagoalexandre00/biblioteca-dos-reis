@@ -34,9 +34,16 @@ class ReservationController extends Controller
     public function dashboard()
     {
         $user = auth()->user();
-        // $reservations = Reservation:;;
+        $reservations = Reservation::where('users_id', $user->id)->get();
+
+        $reservationReturnDates = [];
+        $books = [];
+        foreach ($reservations as $reservation) {
+            $books[] = Book::findOrFail($reservation->books_id);
+            $reservationReturnDates[] = $reservation->return_date;
+        }
 
 
-        return view('dashboard');
+        return view('dashboard', ['livros' => $books, 'dataDevolucao' => $reservationReturnDates]);
     }
 }
