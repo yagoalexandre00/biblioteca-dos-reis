@@ -64,3 +64,32 @@ php artisan db:seed --class=DBSeeder
 ```
 php artisan serve
 ```
+
+### Explicando a aplicação 🧠
+#### Banco de Dados
+O Banco de Dados da biblioteca possui 3 tabelas:
+- Usuários (users)
+- Livros (books)
+- Reservas (reservations)
+
+### Livros
+Os livros são ser cadastrados com nome, gênero, autor, número de registro, capa e sinopse.
+
+### Usuários
+Os usuários se diferem entre usuários administradores e comuns. <br>
+Os usuários comuns possuem a atribuição de realizar a reserva de livros. <br>
+Os usuários administradores possuem a atribuição de realizar a reserva de livros e também podem adicionar livros na biblioteca. <br>
+Abaixo se encontram as credenciais de cada usuário criado no Seeder.
+
+```
+Usuário comum
+login: usuario1@teste
+senha: 1234
+```
+```
+Usuário administrador
+login: admin@teste
+senha: 1234
+```
+
+### Obrigado pela atenção! Qualquer dúvida/erro/bug entre em contato através do email *goltarayago@gmail.com*
