@@ -31,39 +31,38 @@
                 <div class="navbar-nav">
                     <a class="nav-link" href="/">Home</a>
                     <a class="nav-link" href="/livros">Livros</a>
-                    @auth
-                                    <a class="nav-link" href="/livros/criar">Adicionar Livro</a>
-                                    <a class="nav-link" href="/dashboard">Minhas reservas</a>
-                                    <form action="/logout" method="POST">
-                                        @csrf
-                                        <a
-                                        class="nav-link"
-                                        href="/dashboard"
-                                        onclick="event.preventDefault();
-                                    this.closest('form').submit();">Sair</a>
-                                    </form>
-
-                    @endauth
-                    @guest
-                                    <a class="nav-link" href="/login">Entrar</a>
-                                    <a class="nav-link" href="/register">Cadastrar</a>
-                    @endguest
-                </div>
-            </div>
-        </div>
+        @auth
+        @if (auth()->user()->is_admin == '1')
+            <a class="nav-link" href="/livros/criar">Adicionar Livro</a>
+        @endif
+            <a class="nav-link" href="/dashboard">{{ auth()->user()->is_admin == '0' ? 'Minhas Reservas' : 'Painel de Controle' }}</a>
+            <form action="/logout" method="POST">
+                @csrf
+                <a class="nav-link" href="/dashboard"
+                onclick="event.preventDefault();
+                        this.closest('form').submit();">Sair</a>
+            </form>
+        @endauth
+        @guest
+            <a class="nav-link" href="/login">Entrar</a>
+            <a class="nav-link" href="/register">Cadastrar</a>
+        @endguest
+    </div>
+    </div>
+    </div>
     </nav>
 
     <main>
         <div class="container-fluid">
             <div class="row">
-            @if (session('msg-success'))
-                <p class="msg-success">{{ session('msg-success') }}</p>
-            @elseif (session('msg-error'))
-                <p class="msg-error">{{ session('msg-error') }}</p>
-            @endif
-    @yield('content')
-    </div>
-    </div>
+                @if (session('msg-success'))
+                    <p class="msg-success">{{ session('msg-success') }}</p>
+                @elseif (session('msg-error'))
+                    <p class="msg-error">{{ session('msg-error') }}</p>
+                @endif
+                @yield('content')
+            </div>
+        </div>
     </main>
 
     <footer>

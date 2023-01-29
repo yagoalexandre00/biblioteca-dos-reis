@@ -3,8 +3,13 @@
 @section('content')
 
     <div class="page-header">
-        <h1>Minhas Reservas</h1>
+        @if (auth()->user()->is_admin == '1')
+            <h1>Painel de Controle</h1>
+        @else
+            <h1>Minhas Reservas</h1>
+        @endif
     </div>
+
 
     <div class="dashboard-books-table">
         @if (count($livros) === 0)
