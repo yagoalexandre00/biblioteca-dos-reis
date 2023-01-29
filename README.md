@@ -55,8 +55,12 @@ npm install
 npm run build
 php artisan migrate
 ```
+**6. Com tudo corretamente instalado, é hora de popularmos o Banco de Dados com alguns usuários e livros. Para isso, utilizei o Seeder do Laravel.**
+```
+php artisan db:seed --class=DBSeeder  
+```
 
-**6. Realizado todo o passo a passo, agora é a tão esperada hora de rodas a aplicação! 😄**
+**7. Realizado todo o passo a passo, agora é a tão esperada hora de rodas a aplicação! 😄**
 ```
 php artisan serve
 ```
