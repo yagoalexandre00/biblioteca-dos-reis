@@ -18,9 +18,11 @@ git clone https://github.com/goltaraya/biblioteca-dos-reis.git
 cd biblioteca-dos-reis
 ```
 
-**2. Depois disso, é necessário instalar as dependências do projeto:**
+**2. Depois disso, é necessário instalar e atualizar as dependências do projeto e gerar a key:**
 ```
 composer install
+composer update
+php artisan key:generate
 ```
 
 **3. Feito isso, é hora de criar um arquivo com as variáveis de ambiente (o famoso .env). Como O laravel já disponibiliza uma .env.example, nós iremos apenas copiar e renomear este arquivo:**
@@ -60,7 +62,7 @@ php artisan migrate
 php artisan db:seed --class=DBSeeder  
 ```
 
-**7. Realizado todo o passo a passo, agora é a tão esperada hora de rodas a aplicação! 😄**
+**7. Realizado todo o passo a passo, agora é a tão esperada hora de rodar a aplicação! 😄**
 ```
 php artisan serve
 ```
